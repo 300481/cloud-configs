@@ -1,0 +1,13 @@
+#cloud-config
+ssh_authorized_keys:
+  - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKlZY0GrmLS6WE1mjB32kQExU6PHZrIlkcoWBNG7XTZx
+rancher:
+  repositories:
+    rancheros-firewall:
+      url: https://raw.githubusercontent.com/300481/rancheros-firewall/master
+  services_include:
+    rancheros-firewall: true
+  ssh:
+    port: 65002
+  environment:
+    SSH_PORT: 65002
