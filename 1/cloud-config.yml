@@ -11,3 +11,5 @@ rancher:
     port: 65002
   environment:
     SSH_PORT: 65002
+    CRYPT_KEY_URL: https://www.googleapis.com/storage/v1/b/files3004/o/keyfile?alt=media
+
