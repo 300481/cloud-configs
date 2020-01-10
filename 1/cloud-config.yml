@@ -3,9 +3,12 @@ ssh_authorized_keys:
   - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKlZY0GrmLS6WE1mjB32kQExU6PHZrIlkcoWBNG7XTZx
 rancher:
   repositories:
+    rancheros-data-encryption:
+      url: https://raw.githubusercontent.com/300481/rancheros-data-encryption/master
     rancheros-firewall:
       url: https://raw.githubusercontent.com/300481/rancheros-firewall/master
   services_include:
+    rancheros-data-encryption: true
     rancheros-firewall: true
   ssh:
     port: 65002
