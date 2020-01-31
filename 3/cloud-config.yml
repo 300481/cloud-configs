@@ -1,0 +1,18 @@
+#cloud-config
+ssh_authorized_keys:
+  - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOAlggD44EbTH4pD756iJxF48uiqzIoRGGGOMMXcfGQ1
+rancher:
+  repositories:
+    datacrypt:
+      url: https://raw.githubusercontent.com/300481/datacrypt/master
+    shield:
+      url: https://raw.githubusercontent.com/300481/shield/master
+  services_include:
+    datacrypt: true
+    shield: true
+  ssh:
+    port: 65003
+  environment:
+    SSH_PORT: 65003
+    CRYPT_KEY_URL: https://www.googleapis.com/storage/v1/b/files3004/o/keyfile3?alt=media
+
