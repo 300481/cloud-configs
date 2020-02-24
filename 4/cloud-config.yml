@@ -1,0 +1,18 @@
+#cloud-config
+ssh_authorized_keys:
+  - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKFsauK8UgcYMlXlVgn5ox04z1v0OIJgfheatGQ4kKSi
+rancher:
+  repositories:
+    datacrypt:
+      url: https://raw.githubusercontent.com/300481/datacrypt/master
+    shield:
+      url: https://raw.githubusercontent.com/300481/shield/master
+  services_include:
+    datacrypt: true
+    shield: true
+  ssh:
+    port: 65004
+  environment:
+    SSH_PORT: 65004
+    CRYPT_KEY_URL: https://www.dropbox.com/s/luzxk69yo1pe94r/099148e5-f13e-47ed-bdd4-a428cf2da2fe?dl=1
+
